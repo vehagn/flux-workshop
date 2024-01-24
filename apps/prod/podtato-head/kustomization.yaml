@@ -11,7 +11,7 @@ images:
   - name: ghcr.io/podtato-head/hat
     newTag: 0.2.7
   - name: ghcr.io/podtato-head/left-arm
-    newTag: 0.2.7
+    newTag: 100.0.0
   - name: ghcr.io/podtato-head/right-arm
     newTag: 0.2.7
   - name: ghcr.io/podtato-head/left-leg
