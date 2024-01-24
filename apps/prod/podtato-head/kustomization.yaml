@@ -29,4 +29,22 @@ patches:
     target:
       kind: Deployment
       name: podtato-head-hat
+  - patch: |-
+      - op: add
+        path: "/spec/template/spec/containers/0/env/-"
+        value:
+          name: PODTATO_PART_NUMBER
+          value: "03"
+    target:
+      kind: Deployment
+      name: podtato-head-left-arm
+  - patch: |-
+      - op: add
+        path: "/spec/template/spec/containers/0/env/-"
+        value:
+          name: PODTATO_PART_NUMBER
+          value: "04"
+    target:
+      kind: Deployment
+      name: podtato-head-right-leg
 
