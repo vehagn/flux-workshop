@@ -11,10 +11,22 @@ images:
   - name: ghcr.io/podtato-head/hat
     newTag: 0.2.7
   - name: ghcr.io/podtato-head/left-arm
-    newTag: 100.0.0
+    newTag: 0.2.7
   - name: ghcr.io/podtato-head/right-arm
     newTag: 0.2.7
   - name: ghcr.io/podtato-head/left-leg
     newTag: 0.2.7
   - name: ghcr.io/podtato-head/right-leg
     newTag: 0.2.7
+
+patches:
+  - patch: |-
+      - op: add
+        path: "/spec/template/spec/containers/0/env/-"
+        value:
+          name: PODTATO_PART_NUMBER
+          value: "02"
+    target:
+      kind: Deployment
+      name: podtato-head-hat
+
